@@ -29,7 +29,7 @@ const Home = () => {
                 <span className="gradient-text">Deepan</span>
               </h1>
               <h2 className="text-2xl md:text-3xl text-muted-foreground">
-                Embedded & IoT Engineer
+                Engineer | Innovator | Tech Explorer
               </h2>
             </motion.div>
 
