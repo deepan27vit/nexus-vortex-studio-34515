@@ -39,9 +39,11 @@ const Home = () => {
               transition={{ delay: 0.4 }}
               className="text-lg text-muted-foreground leading-relaxed"
             >
-              Crafting innovative embedded systems and IoT solutions that bridge
-              the physical and digital worlds. Passionate about creating
-              intelligent, connected devices.
+              I'm a curious mind who loves creating technology that bridges imagination and innovation. 
+              My passion lies in exploring emerging technologies and turning them into real-world solutions. 
+              Whether designing systems or writing code, I focus on making tech purposeful and human-centered. 
+              Every project I build is a step toward a smarter, more connected future. 
+              Constantly evolving — driven by curiosity, creativity, and impact.
             </motion.p>
 
             <motion.div
