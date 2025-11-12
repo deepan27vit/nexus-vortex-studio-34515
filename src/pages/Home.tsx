@@ -122,25 +122,110 @@ const Home = () => {
           viewport={{ once: true }}
           className="glass-card p-8 rounded-2xl"
         >
-          <h3 className="text-2xl font-bold mb-6 text-center">
+          <h3 className="text-2xl font-bold mb-8 text-center">
             Technologies I Work With
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {["Arduino IDE", "Canva Designing", "Embedded C", "Git & GitHub", "Java", "Linux", "MPLAB X IDE", "NI LabVIEW", "PIC Microcontrollers", "Proteus", "STM32", "UI & UX Designing"].map(
-              (tech, index) => (
-                <motion.div
-                  key={tech}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className="glass-card p-4 rounded-xl text-center hover:border-primary/50 transition-all"
-                >
-                  <p className="font-semibold">{tech}</p>
-                </motion.div>
-              )
-            )}
+          
+          <div className="space-y-8">
+            {/* Programming Languages */}
+            <div>
+              <h4 className="text-lg font-semibold text-secondary mb-4">Programming Languages</h4>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {["Embedded C", "Java"].map((tech, index) => (
+                  <motion.div
+                    key={tech}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.05, y: -5 }}
+                    className="glass-card p-4 rounded-xl text-center hover:border-primary/50 transition-all"
+                  >
+                    <p className="font-semibold">{tech}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Development Tools & IDEs */}
+            <div>
+              <h4 className="text-lg font-semibold text-secondary mb-4">Development Tools & IDEs</h4>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {["Arduino IDE", "Git & GitHub", "MPLAB X IDE", "NI LabVIEW", "Proteus"].map((tech, index) => (
+                  <motion.div
+                    key={tech}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.05, y: -5 }}
+                    className="glass-card p-4 rounded-xl text-center hover:border-primary/50 transition-all"
+                  >
+                    <p className="font-semibold">{tech}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Microcontrollers & Hardware */}
+            <div>
+              <h4 className="text-lg font-semibold text-secondary mb-4">Microcontrollers & Hardware</h4>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {["PIC Microcontrollers", "STM32"].map((tech, index) => (
+                  <motion.div
+                    key={tech}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.05, y: -5 }}
+                    className="glass-card p-4 rounded-xl text-center hover:border-primary/50 transition-all"
+                  >
+                    <p className="font-semibold">{tech}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Operating Systems */}
+            <div>
+              <h4 className="text-lg font-semibold text-secondary mb-4">Operating Systems</h4>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {["Linux"].map((tech, index) => (
+                  <motion.div
+                    key={tech}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.05, y: -5 }}
+                    className="glass-card p-4 rounded-xl text-center hover:border-primary/50 transition-all"
+                  >
+                    <p className="font-semibold">{tech}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Design Tools */}
+            <div>
+              <h4 className="text-lg font-semibold text-secondary mb-4">Design Tools</h4>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {["Canva Designing", "UI & UX Designing"].map((tech, index) => (
+                  <motion.div
+                    key={tech}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.05, y: -5 }}
+                    className="glass-card p-4 rounded-xl text-center hover:border-primary/50 transition-all"
+                  >
+                    <p className="font-semibold">{tech}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
       </section>
