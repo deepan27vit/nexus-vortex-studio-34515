@@ -126,7 +126,7 @@ const Home = () => {
             Technologies I Work With
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {["React", "Node.js", "Embedded C", "IoT", "Python", "Arduino", "ESP32", "MQTT"].map(
+            {["Arduino IDE", "Canva Designing", "Embedded C", "Git & GitHub", "Java", "Linux", "MPLAB X IDE", "NI LabVIEW", "PIC Microcontrollers", "Proteus", "STM32", "UI & UX Designing"].map(
               (tech, index) => (
                 <motion.div
                   key={tech}
