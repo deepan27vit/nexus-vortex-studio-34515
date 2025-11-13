@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
+    { icon: Mail, href: "mailto:deepan27vit@gmail.com", label: "Email" },
     { icon: Github, href: "https://github.com", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Instagram, href: "https://instagram.com/im_dpan_27", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/im_dpan_27", label: "Instagram" },
   ];
 
   return (
