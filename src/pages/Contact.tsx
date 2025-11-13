@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { ThreeBackground } from "@/components/ThreeBackground";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,8 +33,9 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24 pb-20">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen pt-24 pb-20 relative">
+      <ThreeBackground />
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
