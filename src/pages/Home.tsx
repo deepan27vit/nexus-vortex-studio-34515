@@ -2,13 +2,17 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ThreeBackground } from "@/components/ThreeBackground";
 
 const Home = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
+      {/* 3D Background */}
+      <ThreeBackground />
+      
       {/* Animated Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-radial from-primary/20 via-background to-background" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-gradient-radial from-primary/20 via-background to-background pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)] pointer-events-none" />
 
       {/* Hero Section */}
       <section className="relative container mx-auto px-4 pt-32 pb-20 min-h-screen flex items-center">
