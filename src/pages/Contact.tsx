@@ -27,7 +27,7 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "deepan@example.com" },
+    { icon: Mail, label: "Email", value: "deepan27vit@gmail.com" },
     { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
     { icon: MapPin, label: "Location", value: "San Francisco, CA" },
   ];
