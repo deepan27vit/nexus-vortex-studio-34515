@@ -50,7 +50,7 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-primary': 'linear-gradient(135deg, hsl(262 83% 58%), hsl(189 94% 55%))',
+        'gradient-primary': 'linear-gradient(135deg, hsl(210 100% 50%), hsl(142 76% 45%))',
       },
       borderRadius: {
         lg: "var(--radius)",
