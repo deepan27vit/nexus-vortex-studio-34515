@@ -1,14 +1,11 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, Youtube, Twitter, Code2 } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
     { icon: Github, href: "https://github.com", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
     { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Code2, href: "https://leetcode.com", label: "LeetCode" },
   ];
 
   return (
