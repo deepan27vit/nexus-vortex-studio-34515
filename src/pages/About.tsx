@@ -33,38 +33,6 @@ const About = () => {
               real, functional, modern tech.
             </p>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6 }}
-            className="mt-12 glass-card p-8 rounded-2xl"
-          >
-            <h2 className="text-3xl font-bold mb-6">Experience Highlights</h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  IoT Solutions Architect
-                </h3>
-                <p className="text-muted-foreground mb-2">TechCorp • 2022 - Present</p>
-                <p className="text-foreground/80">
-                  Led development of enterprise IoT solutions, managing projects from
-                  concept to deployment with a focus on scalability and security.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  Embedded Systems Engineer
-                </h3>
-                <p className="text-muted-foreground mb-2">Innovation Labs • 2020 - 2022</p>
-                <p className="text-foreground/80">
-                  Developed firmware for various embedded platforms, optimizing
-                  performance and implementing robust communication protocols.
-                </p>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </div>
