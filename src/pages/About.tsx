@@ -29,18 +29,16 @@ const About = () => {
             transition={{ delay: 0.2 }}
             className="glass-card p-8 rounded-2xl mb-12"
           >
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              I'm an Embedded Systems and IoT Engineer with a passion for creating
-              intelligent, connected devices that solve real-world problems. With
-              expertise spanning hardware design, firmware development, and cloud
-              integration, I bring ideas to life from concept to production.
-            </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My journey in technology has been driven by curiosity and a desire to
-              push the boundaries of what's possible with embedded systems. Whether
-              it's optimizing power consumption in battery-operated devices or
-              designing robust communication protocols, I thrive on tackling
-              complex challenges.
+              I build things that blend hardware, software, and creativity into clean, 
+              futuristic tech. From microcontrollers and IoT systems to Java code, Linux 
+              workflows, and Proteus simulations, I love engineering that feels smooth, 
+              smart, and intentionally designed. I'm the kind of person who can debug 
+              embedded code, sketch a UI, design a system flow, and ship it—all with the 
+              same energy. Whether it's ESP32 prototypes, cloud-connected builds, or 
+              aesthetic UI/UX, I'm always experimenting, refining, and leveling up. My 
+              work lives where engineering meets innovation, and where ideas turn into 
+              real, functional, modern tech.
             </p>
           </motion.div>
 
