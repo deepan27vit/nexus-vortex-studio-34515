@@ -1,15 +1,7 @@
 import { motion } from "framer-motion";
-import { Code2, Cpu, Wifi, Zap } from "lucide-react";
 import { ThreeBackground } from "@/components/ThreeBackground";
 
 const About = () => {
-  const skills = [
-    { name: "Embedded Systems", level: 90, icon: Cpu },
-    { name: "IoT Development", level: 85, icon: Wifi },
-    { name: "Circuit Design", level: 80, icon: Zap },
-    { name: "Software Development", level: 88, icon: Code2 },
-  ];
-
   return (
     <div className="min-h-screen pt-24 pb-20 relative">
       <ThreeBackground />
@@ -40,47 +32,6 @@ const About = () => {
               work lives where engineering meets innovation, and where ideas turn into 
               real, functional, modern tech.
             </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-          >
-            <h2 className="text-3xl font-bold mb-8">My Skills</h2>
-            <div className="space-y-8">
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="glass-card p-6 rounded-xl"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 rounded-lg bg-gradient-primary">
-                      <skill.icon className="text-background" size={24} />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-center mb-2">
-                        <h3 className="font-semibold text-lg">{skill.name}</h3>
-                        <span className="text-primary font-bold">{skill.level}%</span>
-                      </div>
-                      <div className="w-full h-3 bg-muted rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 1, delay: 0.2 }}
-                          className="h-full bg-gradient-primary"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
 
           <motion.div
