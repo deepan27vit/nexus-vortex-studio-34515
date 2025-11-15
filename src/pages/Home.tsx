@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ThreeBackground } from "@/components/ThreeBackground";
-import avatar from "@/assets/avatar-2.jpg";
+import avatar3D from "@/assets/avatar-3d-realistic.png";
 
 const Home = () => {
   return (
@@ -80,7 +80,7 @@ const Home = () => {
             </motion.div>
           </motion.div>
 
-          {/* 3D Avatar */}
+          {/* 3D Realistic Avatar - Secondary Identity Element */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -88,39 +88,63 @@ const Home = () => {
             className="relative hidden md:flex items-center justify-center"
           >
             <div className="relative w-full max-w-md">
-              {/* Animated glow background */}
+              {/* Soft ambient glow background */}
               <motion.div
                 animate={{
-                  scale: [1, 1.1, 1],
-                  opacity: [0.3, 0.5, 0.3],
+                  scale: [1, 1.15, 1],
+                  opacity: [0.2, 0.4, 0.2],
                 }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="absolute inset-0 bg-gradient-primary blur-3xl rounded-full"
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute inset-0 bg-gradient-primary blur-3xl"
               />
               
-              {/* Avatar with subtle animations */}
+              {/* 3D Avatar with breathing animation */}
               <motion.div
                 animate={{
-                  y: [0, -10, 0],
+                  y: [0, -12, 0],
+                  rotateY: [0, 3, 0, -3, 0],
                 }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="relative z-10"
+                transition={{ 
+                  y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+                  rotateY: { duration: 8, repeat: Infinity, ease: "easeInOut" }
+                }}
+                className="relative z-10 perspective-1000"
               >
                 <motion.img
-                  src={avatar}
-                  alt="Deepan - 3D Avatar"
-                  className="w-full h-auto rounded-full shadow-2xl"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
+                  src={avatar3D}
+                  alt="Deepan - Professional 3D Avatar"
+                  className="w-full h-auto drop-shadow-2xl"
+                  whileHover={{ 
+                    scale: 1.05,
+                    rotateY: 5,
+                    transition: { duration: 0.4 }
+                  }}
+                  style={{
+                    filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3))"
+                  }}
                 />
               </motion.div>
 
-              {/* Rotating ring decoration */}
+              {/* Subtle rotating ring decoration */}
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full border-2 border-primary/20"
-                style={{ transform: "scale(1.1)" }}
+                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 border border-primary/10"
+                style={{ 
+                  transform: "scale(1.15)",
+                  borderRadius: "40% 60% 60% 40% / 60% 40% 60% 40%"
+                }}
+              />
+              
+              {/* Counter-rotating accent */}
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 border border-secondary/10"
+                style={{ 
+                  transform: "scale(1.2)",
+                  borderRadius: "60% 40% 40% 60% / 40% 60% 40% 60%"
+                }}
               />
             </div>
           </motion.div>
