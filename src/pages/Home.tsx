@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ThreeBackground } from "@/components/ThreeBackground";
+import avatar from "@/assets/avatar-2.jpg";
 
 const Home = () => {
   return (
@@ -79,39 +80,47 @@ const Home = () => {
             </motion.div>
           </motion.div>
 
-          {/* Animated Visual Element */}
+          {/* 3D Avatar */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative hidden md:block"
+            className="relative hidden md:flex items-center justify-center"
           >
-            <div className="relative w-full h-[500px] flex items-center justify-center">
-              {/* Animated Rings */}
+            <div className="relative w-full max-w-md">
+              {/* Animated glow background */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.3, 0.5, 0.3],
+                }}
+                transition={{ duration: 4, repeat: Infinity }}
+                className="absolute inset-0 bg-gradient-primary blur-3xl rounded-full"
+              />
+              
+              {/* Avatar with subtle animations */}
+              <motion.div
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="relative z-10"
+              >
+                <motion.img
+                  src={avatar}
+                  alt="Deepan - 3D Avatar"
+                  className="w-full h-auto rounded-full shadow-2xl"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.div>
+
+              {/* Rotating ring decoration */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute w-96 h-96 rounded-full border-2 border-primary/30"
-              />
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute w-80 h-80 rounded-full border-2 border-secondary/30"
-              />
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                className="absolute w-64 h-64 rounded-full border-2 border-primary/20"
-              />
-
-              {/* Center Glow */}
-              <motion.div
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.5, 0.8, 0.5],
-                }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute w-32 h-32 rounded-full bg-gradient-primary blur-3xl"
+                className="absolute inset-0 rounded-full border-2 border-primary/20"
+                style={{ transform: "scale(1.1)" }}
               />
             </div>
           </motion.div>
