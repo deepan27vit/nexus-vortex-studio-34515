@@ -43,7 +43,7 @@ const Projects = () => {
         "IoT-based environmental monitoring system using DHT sensors with Arduino for real-time temperature and humidity tracking to optimize plant health.",
       tags: ["IoT", "DHT Sensor", "Arduino", "Environmental Monitoring"],
       image: plantMonitoring,
-      github: "https://github.com/deepan27vit/Plant-Monitoring",
+      github: "https://github.com/deepan27vit/Plant-Monitoring-System.git",
     },
     {
       title: "Smart Home Automation",
@@ -51,7 +51,7 @@ const Projects = () => {
         "Mobile-controlled home automation system with Blynk dashboard integration for wireless control of lights, fans, and appliances from anywhere.",
       tags: ["IoT Control", "Blynk", "Mobile App", "Wireless"],
       image: smartHome,
-      github: "https://github.com/deepan27vit/Smart-Home",
+      github: "https://github.com/deepan27vit/Smart-Home-Automation.git",
     },
     {
       title: "Smart Car Parking System",
@@ -59,7 +59,7 @@ const Projects = () => {
         "Automated parking gate with IR sensor detection and servo motor control. Features real-time slot availability display and intelligent space management.",
       tags: ["IR Sensing", "Servo Control", "Automation", "LCD Display"],
       image: smartParking,
-      github: "https://github.com/deepan27vit/Parking-System",
+      github: "https://github.com/deepan27vit/Smart-Car-Parking-System.git",
     },
     {
       title: "Robo-Eyes Animation System",
@@ -67,7 +67,7 @@ const Projects = () => {
         "Expressive OLED display system featuring animated robot eyes with multiple emotions and states. Perfect for adding personality to robotic projects.",
       tags: ["OLED Display", "Animation", "Embedded Graphics", "UI Design"],
       image: roboEyes,
-      github: "https://github.com/deepan27vit/Expressive-Eyes",
+      github: "https://github.com/deepan27vit/Expressive-Eyes-with-Arduino.git",
     },
   ];
 
