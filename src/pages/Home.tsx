@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ThreeBackground } from "@/components/ThreeBackground";
-import avatar3D from "@/assets/avatar-3d-realistic.png";
+import avatarStylized from "@/assets/avatar-stylized.png";
 
 const Home = () => {
   return (
@@ -111,7 +111,7 @@ const Home = () => {
                 className="relative z-10 perspective-1000"
               >
                 <motion.img
-                  src={avatar3D}
+                  src={avatarStylized}
                   alt="Deepan - Professional 3D Avatar"
                   className="w-full h-auto drop-shadow-2xl"
                   whileHover={{ 
