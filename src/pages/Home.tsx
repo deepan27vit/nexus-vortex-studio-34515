@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ThreeBackground } from "@/components/ThreeBackground";
-import avatarStylized from "@/assets/avatar-stylized.png";
+import avatar3DHero from "@/assets/avatar-3d-hero.png";
 
 const Home = () => {
   return (
@@ -80,72 +80,122 @@ const Home = () => {
             </motion.div>
           </motion.div>
 
-          {/* 3D Realistic Avatar - Secondary Identity Element */}
+          {/* 3D Avatar with Circular Frame and Depth Effect */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
             className="relative hidden md:flex items-center justify-center"
           >
-            <div className="relative w-full max-w-md">
-              {/* Soft ambient glow background */}
+            <div className="relative w-full max-w-md aspect-square">
+              {/* Animated depth layers - 3D effect */}
               <motion.div
                 animate={{
-                  scale: [1, 1.15, 1],
+                  scale: [1, 1.05, 1],
                   opacity: [0.2, 0.4, 0.2],
                 }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 bg-gradient-primary blur-3xl"
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 via-secondary/40 to-primary/40 blur-2xl transform translate-z-[-20px]"
+                style={{ transform: 'translateZ(-20px)' }}
               />
               
-              {/* 3D Avatar with breathing animation */}
               <motion.div
                 animate={{
-                  y: [0, -12, 0],
-                  rotateY: [0, 3, 0, -3, 0],
+                  scale: [1, 1.03, 1],
+                  opacity: [0.3, 0.5, 0.3],
                 }}
-                transition={{ 
-                  y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
-                  rotateY: { duration: 8, repeat: Infinity, ease: "easeInOut" }
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5
                 }}
-                className="relative z-10 perspective-1000"
-              >
-                <motion.img
-                  src={avatarStylized}
-                  alt="Deepan - Professional 3D Avatar"
-                  className="w-full h-auto drop-shadow-2xl"
-                  whileHover={{ 
-                    scale: 1.05,
-                    rotateY: 5,
-                    transition: { duration: 0.4 }
-                  }}
-                  style={{
-                    filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3))"
-                  }}
-                />
-              </motion.div>
-
-              {/* Subtle rotating ring decoration */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 border border-primary/10"
-                style={{ 
-                  transform: "scale(1.15)",
-                  borderRadius: "40% 60% 60% 40% / 60% 40% 60% 40%"
-                }}
+                className="absolute inset-4 rounded-full bg-gradient-to-tr from-secondary/30 via-primary/30 to-accent/30 blur-xl"
               />
               
-              {/* Counter-rotating accent */}
+              {/* Main circular frame with avatar */}
               <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 border border-secondary/10"
-                style={{ 
-                  transform: "scale(1.2)",
-                  borderRadius: "60% 40% 40% 60% / 40% 60% 40% 60%"
+                animate={{
+                  y: [0, -8, 0],
+                  rotateY: [0, 2, 0, -2, 0],
                 }}
-              />
+                transition={{
+                  y: {
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  },
+                  rotateY: {
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+                className="relative z-10 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl"
+                style={{ 
+                  boxShadow: '0 20px 60px rgba(0,0,0,0.3), 0 0 40px rgba(139, 92, 246, 0.2)',
+                  transformStyle: 'preserve-3d'
+                }}
+              >
+                {/* Circular gradient overlay for depth */}
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 pointer-events-none z-10 rounded-full" />
+                
+                {/* Avatar image with breathing effect */}
+                <motion.img 
+                  src={avatar3DHero}
+                  alt="Deepan - 3D Professional Avatar" 
+                  className="w-full h-full object-cover"
+                  animate={{
+                    scale: [1, 1.02, 1],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+                
+                {/* Subtle shine effect */}
+                <motion.div
+                  animate={{
+                    x: ['-100%', '200%'],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatDelay: 2,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12"
+                />
+              </motion.div>
+              
+              {/* Floating particles effect */}
+              {[...Array(5)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  animate={{
+                    y: [0, -30, 0],
+                    x: [0, Math.sin(i) * 20, 0],
+                    opacity: [0, 1, 0],
+                  }}
+                  transition={{
+                    duration: 3 + i,
+                    repeat: Infinity,
+                    delay: i * 0.5,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute w-2 h-2 rounded-full bg-primary/60"
+                  style={{
+                    left: `${20 + i * 15}%`,
+                    top: `${30 + i * 10}%`,
+                  }}
+                />
+              ))}
             </div>
           </motion.div>
         </div>
