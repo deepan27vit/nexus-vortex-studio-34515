@@ -28,8 +28,8 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "deepan27vit@gmail.com" },
-    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-    { icon: MapPin, label: "Location", value: "San Francisco, CA" },
+    { icon: Phone, label: "Phone", value: "+91 8946032003" },
+    { icon: MapPin, label: "Location", value: "Chennai, Tamil Nadu" },
   ];
 
   return (
