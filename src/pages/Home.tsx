@@ -66,10 +66,10 @@ const Home = () => {
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <a href="https://drive.google.com/file/d/1lYMguX_jweQ3tqm1iU3Y7BQ_6rXDUemy/view" target="_blank" rel="noopener noreferrer">
+              <a href="/resume.pdf" download="Deepan_Resume.pdf">
                 <Button size="lg" variant="outline" className="group">
                   <Download className="mr-2 group-hover:translate-y-1 transition-transform" />
-                  Download Resume
+                  Explore My Journey
                 </Button>
               </a>
               <Link to="/contact">
