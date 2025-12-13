@@ -56,7 +56,7 @@ const Navbar = () => {
                 </motion.div>
               </Link>
             ))}
-            <a href="https://drive.google.com/file/d/1lYMguX_jweQ3tqm1iU3Y7BQ_6rXDUemy/view" target="_blank" rel="noopener noreferrer">
+            <a href="/resume.pdf" download="Deepan_Resume.pdf">
               <Button variant="default" className="bg-gradient-primary hover:opacity-90">
                 Resume
               </Button>
@@ -97,7 +97,7 @@ const Navbar = () => {
                 </div>
               </Link>
             ))}
-            <a href="https://drive.google.com/file/d/1lYMguX_jweQ3tqm1iU3Y7BQ_6rXDUemy/view" target="_blank" rel="noopener noreferrer">
+            <a href="/resume.pdf" download="Deepan_Resume.pdf">
               <Button variant="default" className="w-full bg-gradient-primary">
                 Resume
               </Button>
