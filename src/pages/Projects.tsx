@@ -8,6 +8,7 @@ import plantMonitoring from "@/assets/projects/plant-monitoring.jpg";
 import smartHome from "@/assets/projects/smart-home.jpg";
 import smartParking from "@/assets/projects/smart-parking.jpg";
 import roboEyes from "@/assets/projects/robo-eyes.jpg";
+import linuxUtility from "@/assets/projects/linux-utility.jpg";
 
 const Projects = () => {
   const projects = [
@@ -68,6 +69,14 @@ const Projects = () => {
       tags: ["OLED Display", "Animation", "Embedded Graphics", "UI Design"],
       image: roboEyes,
       github: "https://github.com/deepan27vit/Expressive-Eyes-with-Arduino.git",
+    },
+    {
+      title: "Menu-Driven-Linux-Utility",
+      description:
+        "A comprehensive Linux utility tool with an interactive menu-driven interface for system administration tasks, automation scripts, and command-line operations.",
+      tags: ["Linux", "Shell Scripting", "CLI", "System Admin"],
+      image: linuxUtility,
+      github: "https://github.com/deepan27vit/Menu-Driven-Linux-Utility.git",
     },
   ];
 
